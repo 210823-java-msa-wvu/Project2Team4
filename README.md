@@ -14,7 +14,9 @@ Users must be able to like and comment on songs for others to see
 
 Users must be able to follow musicians (stretch goal: follow other users)
 
-Admins must be able to approve public playlists to ensure they follow guidelines for decency
+Users must be able to report comments/posts for inappropriate content
+
+Admins must be able to remove comments/posts if flagged and innappropriate
 
 (stretch goal: Admins must be able to approve public groups)
 
