@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Music B Jammin';
+  credits = 'Robert Campbell, Yousef Abdulrahman, Dave Whiting'
 }
