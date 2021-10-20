@@ -1,0 +1,14 @@
+<hr/>
+<h2>Catalogue</h2>
+
+<ul>
+    <li *ngFor="let song of songs">
+        {{ song.title | uppercase }} by {{song.musician.firstName}} {{song.musician.lastName}}
+    </li>
+</ul>
+
+<ul>
+    <li *ngFor="let song of songs">
+        {{ song | json }}
+    </li>
+</ul>
