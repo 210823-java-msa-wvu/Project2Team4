@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { SONGS } from '../models/mock-songs';
 import { Song } from '../models/song';
 
 @Component({
