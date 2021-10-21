@@ -18,9 +18,17 @@ export class CatalogueComponent implements OnInit {
   constructor(private songService: SongService) { }
 
   ngOnInit(): void {
+    this.getSongs();
+  }
 
-    this.songs = this.songService.getSongs();
-    
+  getSongs(){
+    this.songService.getSongs() // returns observable of Song[]
+    .subscribe(
+      resp => {
+        this.songs = resp;
+      }
+    )
+
   }
 
 }
