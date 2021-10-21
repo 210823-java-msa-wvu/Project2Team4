@@ -8,12 +8,16 @@ public class Song {
 
     @Id
     @GeneratedValue(strategy= GenerationType.IDENTITY)
-    private Integer id;
-
+    private Integer song_id;
     private String title;
+    private Integer likes;
+    private Integer dislikes;
+    private Integer musician_id;
+    private String url;
+
 
     @ManyToOne
-    @JoinColumn(name = "song_id", insertable = false)
+    @JoinColumn(name = "song_id", insertable = false, updatable = false)
     private Musician musician;
 
     public Song() {
@@ -25,17 +29,17 @@ public class Song {
     }
 
     public Song(Integer id, String title, Musician musician) {
-        this.id = id;
+        this.song_id = id;
         this.title = title;
         this.musician = musician;
     }
 
     public Integer getId() {
-        return id;
+        return song_id;
     }
 
     public void setId(Integer id) {
-        this.id = id;
+        this.song_id = id;
     }
 
     public String getTitle() {
@@ -46,38 +50,57 @@ public class Song {
         this.title = title;
     }
 
-    public Musician getAuthor() {
+    public Musician getMusician() {
         return musician;
     }
 
-    public void setAuthor(Musician musician) {
+    public void setMusician(Musician musician) {
         this.musician = musician;
     }
 
-    @Override
-    public String toString() {
-        return "Song{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", author=" + musician +
-                '}';
-    }
+    public Integer getLikes() {return likes;}
 
-    @Override
+    public void setLikes(Integer likes) {this.likes = likes;}
+
+    public Integer getDislikes() {return dislikes;}
+
+    public void setDislikes(Integer dislikes) {this.dislikes = dislikes;}
+
+    public Integer getMusician_id() {return musician_id;}
+
+    public void setMusician_id(Integer musician_id) {this.musician_id = musician_id;}
+
+    public String getUrl() {return url;}
+
+    public void setUrl(String url) {this.url = url;}
+
+  @Override
+  public String toString() {
+    return "Song{" +
+      "song_id=" + song_id +
+      ", title='" + title + '\'' +
+      ", likes=" + likes +
+      ", dislikes=" + dislikes +
+      ", musician_id=" + musician_id +
+      ", url='" + url + '\'' +
+      '}';
+  }
+
+  @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
         Song song = (Song) o;
 
-        if (id != null ? !id.equals(song.id) : song.id != null) return false;
+        if (song_id != null ? !song_id.equals(song.song_id) : song.song_id != null) return false;
         if (title != null ? !title.equals(song.title) : song.title != null) return false;
         return musician != null ? musician.equals(song.musician) : song.musician == null;
     }
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
+        int result = song_id != null ? song_id.hashCode() : 0;
         result = 31 * result + (title != null ? title.hashCode() : 0);
         result = 31 * result + (musician != null ? musician.hashCode() : 0);
         return result;

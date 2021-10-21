@@ -1,14 +1,39 @@
-<hr/>
+<!-- <hr/>
 <h2>Catalogue</h2>
 
 <ul>
     <li *ngFor="let song of songs">
         {{ song.title | uppercase }} by {{song.musician.firstName}} {{song.musician.lastName}}
     </li>
-</ul>
+</ul> -->
 
-<ul>
+<!-- <ul>
     <li *ngFor="let song of songs">
         {{ song | json }}
     </li>
-</ul>
+</ul> -->
+
+<h1 class="display-6">Catalogue</h1>
+
+<div class="container">
+    <div class="row row-cols-sm-2 row-cols-md-3 g-4">
+        <div *ngFor="let song of songs" class="col">
+            <div
+                class="card mb-3 h-100"
+                style="width: 18rem;">
+            
+            <div class="card-body">
+                <h5 class="card-title">{{ song.title | uppercase}}</h5>
+                <ul class="list-group">
+                    <li class="list-group-item">by {{ song.musician.firstName + " " + song.musician.lastName }}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<!-- Two way data binding -->
+<input type="text" [(ngModel)]="name">
+<p>Hello, {{ name }}. This is 2 way data binding.</p>

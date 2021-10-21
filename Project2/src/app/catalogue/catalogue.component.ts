@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { SONGS } from '../models/mock-songs';
 import { Song } from '../models/song';
+import { SongService } from '../services/song.service';
 
 @Component({
   selector: 'app-catalogue',
@@ -9,13 +10,16 @@ import { Song } from '../models/song';
 })
 export class CatalogueComponent implements OnInit {
 
+  /*for 2 way binding */
+  name: string = " ";
+
   songs: Song[] = [];
 
-  constructor() { }
+  constructor(private songService: SongService) { }
 
   ngOnInit(): void {
 
-    this.songs = SONGS;
+    this.songs = this.songService.getSongs();
     
   }
 
