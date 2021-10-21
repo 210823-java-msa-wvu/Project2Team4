@@ -12,6 +12,7 @@ import { SongComponent } from './song/song.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
 import { SongService } from './services/song.service';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from  '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [
     SongService
