@@ -10,7 +10,7 @@ public class Musician {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Integer id; // Wrapper Class - making a primitive object-like so that we can work with it (int -> Integer)
+    private Integer musician_id; // Wrapper Class - making a primitive object-like so that we can work with it (int -> Integer)
 
     @Column(name="first_name")
     private String firstName;
@@ -30,18 +30,18 @@ public class Musician {
     }
 
     public Musician(Integer id, String firstName, String lastName) {
-        this.id = id;
+        this.musician_id = id;
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
     // Getters and Setters - methods to interact with private fields in a class
     public Integer getId() { // author.getId();
-        return this.id;
+        return this.musician_id;
     }
 
     public void setId(Integer id) { // author.setId(10);
-        this.id = id;
+        this.musician_id = id;
     }
 
     public String getFirstName() {
@@ -64,7 +64,7 @@ public class Musician {
     @Override
     public String toString() {
         return "Musician{" +
-                "id=" + id +
+                "id=" + musician_id +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 '}';
@@ -77,14 +77,14 @@ public class Musician {
 
         Musician musician = (Musician) o;
 
-        if (id != null ? !id.equals(musician.id) : musician.id != null) return false;
+        if (musician_id != null ? !musician_id.equals(musician.musician_id) : musician.musician_id != null) return false;
         if (firstName != null ? !firstName.equals(musician.firstName) : musician.firstName != null) return false;
         return lastName != null ? lastName.equals(musician.lastName) : musician.lastName == null;
     }
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
+        int result = musician_id != null ? musician_id.hashCode() : 0;
         result = 31 * result + (firstName != null ? firstName.hashCode() : 0);
         result = 31 * result + (lastName != null ? lastName.hashCode() : 0);
         return result;

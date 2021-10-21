@@ -10,6 +10,8 @@ import { MusicianhomepageComponent } from './musicianhomepage/musicianhomepage.c
 import { UserhomepageComponent } from './userhomepage/userhomepage.component';
 import { SongComponent } from './song/song.component';
 import { CatalogueComponent } from './catalogue/catalogue.component';
+import { SongService } from './services/song.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -24,9 +26,12 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    SongService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

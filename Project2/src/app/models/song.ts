@@ -12,5 +12,9 @@ import { Musician } from './musician';
 export interface Song {
     id: number;
     title: string;
+    likes: number;
+    dislikes: number;
+    musician_id: number;
     musician: Musician;
+    url: string
 }

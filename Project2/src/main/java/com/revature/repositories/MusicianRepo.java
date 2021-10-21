@@ -1,4 +1,7 @@
 package com.revature.repositories;
 
-public interface MusicianRepo {
+import com.revature.beans.Musician;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface MusicianRepo extends JpaRepository<Musician, Integer> {
 }
