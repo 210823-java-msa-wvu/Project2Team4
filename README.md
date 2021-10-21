@@ -14,9 +14,9 @@ Users must be able to like and comment on songs for others to see
 
 Users must be able to follow musicians (stretch goal: follow other users)
 
-Users must be able to report comments/posts for inappropriate content
+Users must be able to report comments/posts for inappropriate content (stretch)
 
-Admins must be able to remove comments/posts if flagged and innappropriate
+Admins must be able to remove comments/posts if flagged and innappropriate (stretch)
 
 (stretch goal: Admins must be able to approve public groups)
 
