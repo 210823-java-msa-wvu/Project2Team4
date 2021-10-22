@@ -17,7 +17,7 @@ public class Song {
 
 
     @ManyToOne
-    @JoinColumn(name = "song_id", insertable = false, updatable = false)
+    @JoinColumn(name = "musician_id", insertable = false, updatable = false)
     private Musician musician;
 
     public Song() {
