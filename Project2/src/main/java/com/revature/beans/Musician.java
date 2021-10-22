@@ -11,8 +11,10 @@ public class Musician {
 
     @Id
     @GeneratedValue(strategy=GenerationType.IDENTITY)
-    private Integer musicians_table_id; // Wrapper Class - making a primitive object-like so that we can work with it (int -> Integer)
-    private Integer musician_id;
+    private Integer musician_id; // Wrapper Class - making a primitive object-like so that we can work with it (int -> Integer)
+
+    @Column
+    private Integer musicians_table_id;
 
     @Column(name="first_name")
     private String firstName;
