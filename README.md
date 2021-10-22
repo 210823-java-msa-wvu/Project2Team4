@@ -8,7 +8,7 @@ Users and Musicians must be able to log in / create account
 
 Musicians must be able to add songs under their names (add it to song database with a link to them)
 
-Users must be able to create private and public playlists 
+Users must be able to create private and public playlists (stretch)
 
 Users must be able to like and comment on songs for others to see
 
