@@ -1,1 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+<<<<<<< Updated upstream
+=======
+@import '~bootstrap/dist/css/bootstrap.css';
+
+body { margin-left: 30px; background-image: url("music_background.jpg"); background-repeat: no-repeat; background-size: cover; background-position: center;}
+>>>>>>> Stashed changes
