@@ -1,4 +1,23 @@
-<h1>{{title}}</h1>
-<nav>
-  <a routerLink="/register">Register</a>
-</nav>
+<div>
+    <h1>{{title}}</h1>
+    <p>{{credits}}</p>
+</div>
+<div>
+  <nav>
+    <a routerLink="/register">Register</a>
+    <br>
+    <a routerLink="/login">Login</a>
+  </nav></div>
+  
+  <div>
+    <br>
+    <!-- put an ngSwitch here to decide which component loads here. -->
+    <!--<h3>****Put an ngSwitch here to choose which component to load.******</h3> -->
+    <app-catalogue></app-catalogue>
+    <app-musicianhomepage></app-musicianhomepage>
+    <app-employeehomepage></app-employeehomepage>
+    <app-userhomepage></app-userhomepage>
+    <app-login></app-login>
+    <app-register></app-register>
+  </div>
+  

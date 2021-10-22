@@ -8,6 +8,11 @@ import { LoginComponent } from './login/login.component';
 import { EmployeehomepageComponent } from './employeehomepage/employeehomepage.component';
 import { MusicianhomepageComponent } from './musicianhomepage/musicianhomepage.component';
 import { UserhomepageComponent } from './userhomepage/userhomepage.component';
+import { SongComponent } from './song/song.component';
+import { CatalogueComponent } from './catalogue/catalogue.component';
+import { SongService } from './services/song.service';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from  '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -16,13 +21,19 @@ import { UserhomepageComponent } from './userhomepage/userhomepage.component';
     LoginComponent,
     EmployeehomepageComponent,
     MusicianhomepageComponent,
-    UserhomepageComponent
+    UserhomepageComponent,
+    SongComponent,
+    CatalogueComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    SongService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
