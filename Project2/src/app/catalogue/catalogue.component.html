@@ -15,6 +15,14 @@
 
 <h1 class="display-6">Catalogue</h1>
 
+<!-- Unsure if we should keep this-->
+<!-- Two way data binding -->
+<input type="text" [(ngModel)]="musician_name"> Search by Musician
+<p>Searching for {{ musician_name }}</p>
+
+<input type="text" [(ngModel)]="song_name"> Search by Song Title
+<p>Searching for {{ song_name }}</p>
+
 <div class="container">
     <div class="row row-cols-sm-2 row-cols-md-3 g-4">
         <div *ngFor="let song of songs" class="col">
@@ -34,6 +42,4 @@
 
 <hr>
 
-<!-- Two way data binding -->
-<input type="text" [(ngModel)]="name">
-<p>Hello, {{ name }}. This is 2 way data binding.</p>
+
