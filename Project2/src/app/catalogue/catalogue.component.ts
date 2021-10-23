@@ -11,7 +11,9 @@ import { SongService } from '../services/song.service';
 export class CatalogueComponent implements OnInit {
 
   /*for 2 way binding */
-  name: string = " ";
+  musician_name: string = " ";
+
+  song_name: string = " ";
 
   songs: Song[] = [];
 
