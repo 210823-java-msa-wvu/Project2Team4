@@ -29,11 +29,11 @@ public class User {
         this.password = password;
     }
 
-    public Integer getId() {
+    public Integer getUserId() {
         return user_id;
     }
 
-    public void setId(Integer id) {
+    public void setUserId(Integer id) {
         this.user_id = id;
     }
 
@@ -80,7 +80,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "user_id=" + user_id +
+                "id=" + user_id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", user_type_id=" + user_type_id +

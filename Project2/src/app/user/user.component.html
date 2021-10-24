@@ -1,0 +1,19 @@
+<h1>Users</h1>
+
+Username: <input type="text" [(ngModel)]="username">
+<br>
+Password: <input type="text" [(ngModel)]="password">
+<br>
+<br>
+<button (click)="userLogin()">Login</button>
+{{username}}
+{{password}}
+ 
+<ng-container  *ngFor="let user of users">
+    <ng-container *ngIf="user.username == this.username">
+        Name: {{user.first_name}} {{user.last_name}}
+        <br> username/password: {{user.username}}, {{user.password}}
+        <br> User Id: {{user.userId}}
+        <br> User Type: {{user.user_type_id}}
+    </ng-container>
+</ng-container>
