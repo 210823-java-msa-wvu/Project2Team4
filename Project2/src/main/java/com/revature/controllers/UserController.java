@@ -20,27 +20,29 @@ public class UserController {
         this.userRepo = userRepo;
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping
     public List<User> getAllUsers() {
         return userRepo.findAll();
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping(path="/{id}")
     public User getById(@PathVariable("id") int id) {return userRepo.getById(id);}
 
-<<<<<<< Updated upstream
-=======
-  /*@CrossOrigin(origins = "http://localhost:4200")
-  @GetMapping(path="/{username}")
-  public User getByUsername(@PathVariable("username") String username) {return userRepo.getByUsername(username);}
-*/
+  @CrossOrigin(origins = "http://localhost:4200")
+  @GetMapping(path="/user/{username}")
+  public User getByUsername(@PathVariable("username") String username) {
+      System.out.println("Welcome from getByUsername, username = " + username);
+      return userRepo.getByUsername(username);}
+
     @CrossOrigin(origins = "http://localhost:4200")
->>>>>>> Stashed changes
     @PostMapping(consumes = "application/json", produces = "application/json")
     public User addUser(@RequestBody User user) {
         return userRepo.save(user);
     }
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping(path="/{id}")
     public void updateUser(@PathVariable("id") int id, @RequestBody User user) {
         if ( id == user.getUserId()) {
@@ -48,6 +50,7 @@ public class UserController {
         }
     }
 
+   @CrossOrigin(origins = "http://localhost:4200")
    @DeleteMapping(path="/{id}")
    public void deleteUser(@PathVariable("id") int id) {
             userRepo.delete(userRepo.getById(id));

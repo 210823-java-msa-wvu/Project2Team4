@@ -22,19 +22,23 @@ public class MusicianController {
     this.musicianRepo = musicianRepo;
   }
 
+  @CrossOrigin(origins = "http://localhost:4200")
   @GetMapping
   public List<Musician> getAllMusicians() {
     return musicianRepo.findAll();
   }
 
+  @CrossOrigin(origins = "http://localhost:4200")
   @GetMapping(path="/{id}")
   public Musician getById(@PathVariable("id") int id) {return musicianRepo.getById(id);}
 
+  @CrossOrigin(origins = "http://localhost:4200")
   @PostMapping(consumes = "application/json", produces = "application/json")
   public Musician addMusician(@RequestBody Musician musician) {
     return musicianRepo.save(musician);
   }
 
+  @CrossOrigin(origins = "http://localhost:4200")
   @PutMapping(path="/{id}")
   public void updateMusician(@PathVariable("id") int id, @RequestBody Musician musician) {
     if ( id == musician.getId()) {
@@ -42,6 +46,7 @@ public class MusicianController {
     }
   }
 
+  @CrossOrigin(origins = "http://localhost:4200")
   @DeleteMapping(path="/{id}")
   public void deleteMusician(@PathVariable("id") int id) {
     musicianRepo.delete(musicianRepo.getById(id));

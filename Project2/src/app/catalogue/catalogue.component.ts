@@ -10,12 +10,9 @@ import { SongService } from '../services/song.service';
 export class CatalogueComponent implements OnInit {
 
   /*for 2 way binding */
-<<<<<<< Updated upstream
-  name: string = " ";
-=======
   musician_name: string = " ";
+
   song_name: string = " ";
->>>>>>> Stashed changes
 
   songs: Song[] = [];
 

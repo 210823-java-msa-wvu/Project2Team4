@@ -23,8 +23,8 @@ public class User {
         this.password = password;
     }
 
-    public User(Integer id, String username, String password) {
-        this.user_id = id;
+    public User(Integer user_id, String username, String password) {
+        this.user_id = user_id;
         this.username = username;
         this.password = password;
     }
@@ -33,8 +33,8 @@ public class User {
         return user_id;
     }
 
-    public void setUserId(Integer id) {
-        this.user_id = id;
+    public void setUserId(Integer user_id) {
+        this.user_id = user_id;
     }
 
     public String getUsername() {
@@ -80,7 +80,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id=" + user_id +
+                "user_id=" + user_id +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", user_type_id=" + user_type_id +
