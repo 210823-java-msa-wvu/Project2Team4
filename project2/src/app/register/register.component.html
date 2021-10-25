@@ -1,5 +1,34 @@
-<h3>Registration</h3>
+<h2>Registration</h2>
+
+<form [formGroup]="registerForm">
+
+    Enter first name:<br>
+    <mat-form-field>
+        <input matInput placeholder="first_name" formControlName="first_name">
+    </mat-form-field>
+    <br>
+    Enter last name:<br>
+    <mat-form-field>
+        <input matInput placeholder="last_name" formControlName="last_name">
+    </mat-form-field>
+    <br>
+    Enter username:<br>
+    <mat-form-field>
+        <input matInput placeholder="username" formControlName="username">
+    </mat-form-field>
+    <br>
+    Enter password:<br>
+    <mat-form-field>
+        <input matInput placeholder="password" formControlName="password">
+    </mat-form-field>
+    <br>
+    Enter user type:<br>
+    <mat-form-field>
+        <input matInput placeholder="Enter 1 for new User/Enter 2 for new Musician" formControlName="user_type_id">
+    </mat-form-field>
 
 
+
+</form>
 
 <a routerLink="/login">Return to Login</a>
