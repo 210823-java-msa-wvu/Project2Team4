@@ -31,6 +31,7 @@ public class UserController {
     public User getById(@PathVariable("id") int id) {return userRepo.getById(id);}
 
   @CrossOrigin(origins = "http://localhost:4200")
+
   @GetMapping(path="/user/{username}")
   public User getByUsername(@PathVariable("username") String username) {
       System.out.println("Welcome from getByUsername, username = " + username);
