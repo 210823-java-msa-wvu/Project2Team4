@@ -1,10 +1,20 @@
 <h1>User</h1>
+<div *ngFor="let item of user | keyvalue">
+    <!-- {{ item.key }} - {{ item.value }} -->
+    <h1 *ngIf="item.key == 'first_name'">
+     {{ item.value }}
+    </h1>
+    <h1 *ngIf="item.key == 'last_name'">
+        {{ item.value }}
+       </h1>
+</div>
 Username: <input type="text" [(ngModel)]="username">
 Password: <input type="text" [(ngModel)]="password">
 <button (click)="userLogin()">Login</button>
-<p>{{username}} {{password}}</p>
 
-{{user}}
+<!-- {{user | json}} -->
+
+   
 <!-- <div *ngFor="let user of users">
     <p *ngIf="user.username == username">
         Name: {{ user.first_name }} {{user.last_name}}
