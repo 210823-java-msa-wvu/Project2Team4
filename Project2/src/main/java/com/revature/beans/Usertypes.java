@@ -1,7 +1,13 @@
 package com.revature.beans;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="usertypes")
 public class Usertypes {
 
+  @Id
+  @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer usertype_id;
     private String user_type;
 

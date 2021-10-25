@@ -1,8 +1,13 @@
 package com.revature.beans;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="playlist")
 public class Playlist {
 
-
+  @Id
+  @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer primary_id;
     private Integer user_id;
     private Integer song_id;

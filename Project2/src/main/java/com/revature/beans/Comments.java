@@ -1,9 +1,13 @@
 package com.revature.beans;
 
+import javax.persistence.*;
 import java.util.Date;
 
+@Entity
+@Table(name="comments")
 public class Comments {
-
+  @Id
+  @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer comments_id;
     private Integer user_id;
     private Integer post_id;
