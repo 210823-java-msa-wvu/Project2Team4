@@ -13,6 +13,8 @@ export class UserComponent implements OnInit {
   username: string = " ";
   password: string = " ";
 
+  userprof: string = "";
+
   users: User[] = [];
   user: User | undefined;
 
@@ -52,6 +54,7 @@ export class UserComponent implements OnInit {
         // console.log(usr)
         // console.log(pass)
         if (resp != null){
+          // this.userprof = JSON.stringify(resp);
           if (resp.username == usr && resp.password == pass){
             if (resp.user_type_id == 1){
               this.router.navigate(['/userhomepage']);
