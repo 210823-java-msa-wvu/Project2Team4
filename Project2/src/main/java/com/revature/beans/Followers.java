@@ -1,7 +1,14 @@
 package com.revature.beans;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name="followers")
 public class Followers {
 
+
+  @Id
+  @GeneratedValue(strategy= GenerationType.IDENTITY)
     private Integer followers_id;
     private Integer user_id;
     private Integer musicians_id;
