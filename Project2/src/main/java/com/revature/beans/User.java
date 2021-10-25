@@ -23,18 +23,18 @@ public class User {
         this.password = password;
     }
 
-    public User(Integer id, String username, String password) {
-        this.user_id = id;
+    public User(Integer user_id, String username, String password) {
+        this.user_id = user_id;
         this.username = username;
         this.password = password;
     }
 
-    public Integer getId() {
+    public Integer getUserId() {
         return user_id;
     }
 
-    public void setId(Integer id) {
-        this.user_id = id;
+    public void setUserId(Integer user_id) {
+        this.user_id = user_id;
     }
 
     public String getUsername() {

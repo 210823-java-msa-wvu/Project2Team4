@@ -31,8 +31,11 @@ public class UserController {
     public User getById(@PathVariable("id") int id) {return userRepo.getById(id);}
 
   @CrossOrigin(origins = "http://localhost:4200")
-  @GetMapping(path="/{username}")
-  public User getByUsername(@PathVariable("username") String username) {return userRepo.getByUsername(username);}
+
+  @GetMapping(path="/user/{username}")
+  public User getByUsername(@PathVariable("username") String username) {
+      System.out.println("Welcome from getByUsername, username = " + username);
+      return userRepo.getByUsername(username);}
 
     @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping(consumes = "application/json", produces = "application/json")
@@ -43,7 +46,7 @@ public class UserController {
     @CrossOrigin(origins = "http://localhost:4200")
     @PutMapping(path="/{id}")
     public void updateUser(@PathVariable("id") int id, @RequestBody User user) {
-        if ( id == user.getId()) {
+        if ( id == user.getUserId()) {
             userRepo.save(user);
         }
     }

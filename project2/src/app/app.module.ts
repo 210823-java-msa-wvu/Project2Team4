@@ -13,6 +13,7 @@ import { CatalogueComponent } from './catalogue/catalogue.component';
 import { SongService } from './services/song.service';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from  '@angular/common/http';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { HttpClientModule } from  '@angular/common/http';
     MusicianhomepageComponent,
     UserhomepageComponent,
     SongComponent,
-    CatalogueComponent
+    CatalogueComponent,
+    UserComponent
   ],
   imports: [
     BrowserModule,
