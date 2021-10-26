@@ -4,6 +4,7 @@ import com.revature.beans.User;
 import com.revature.repositories.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.List;
 
