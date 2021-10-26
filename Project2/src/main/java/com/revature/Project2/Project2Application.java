@@ -6,10 +6,11 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
-@SpringBootApplication //for auto config
+ //for auto config
 @ComponentScan("com.revature") // look for components/stereotypes
 @EnableJpaRepositories("com.revature.repositories")  //repos location
 @EntityScan("com.revature.beans") //entities location
+@SpringBootApplication //for auto config
 public class Project2Application {
 
 	public static void main(String[] args) {

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from '../services/login.service';
-
+const jwt = require('jsonwebtoken');
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -19,6 +19,11 @@ export class LoginComponent implements OnInit {
     .subscribe(
       resp => {
         console.log(resp);
+        let payload = { subject: username}
+        let token = jwt.sign(payload, 'secretKey')
+        console.log(token);
+
+        localStorage.setItem('token',resp.token)
       }
     )
   }
