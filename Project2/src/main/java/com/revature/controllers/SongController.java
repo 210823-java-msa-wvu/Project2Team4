@@ -28,7 +28,7 @@ public class SongController {
 
   @CrossOrigin(origins = "http://localhost:4200")
   @GetMapping(path="/{id}")
-  public Song getById(@PathVariable("id") int id) {return songRepo.getById(id);}
+  public Song findById(@PathVariable("id") int id) {return songRepo.findById(id).get();}
 
   @CrossOrigin(origins = "http://localhost:4200")
   @PostMapping(consumes = "application/json", produces = "application/json")
@@ -37,7 +37,7 @@ public class SongController {
   }
 
   @CrossOrigin(origins = "http://localhost:4200")
-  @PutMapping(path="/{id}")
+  @PutMapping(path="/song/{id}")
   public void updateSong(@PathVariable("id") int id, @RequestBody Song song) {
     if ( id == song.getId()) {
       songRepo.save(song);
