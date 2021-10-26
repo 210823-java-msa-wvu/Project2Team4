@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Song } from '../models/song';
+//import { Song } from '../models/song';
 
 @Component({
   selector: 'app-musicianhomepage',
@@ -21,22 +21,6 @@ export class MusicianhomepageComponent implements OnInit {
   makePlaySong() {
     this.playSong = !this.playSong;
   }
-
-  musicians = [
-    {
-      first_name: 'Jerry', 
-      last_name: 'Garcia'
-    },
-    {
-      first_name: 'Frank', 
-      last_name: 'Zappa'
-    },
-    {
-      first_name: 'Chuck', 
-      last_name: 'Berry'
-    }
-  ]
  */
-  
 
 }
