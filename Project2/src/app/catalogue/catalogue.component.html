@@ -9,9 +9,15 @@ URL: <input type="text" [(ngModel)]="this.url">
 <p>Song Title {{ title }}    Musician ID {{ musician_id }}  url {{ url }}</p>
 
 <hr>
+Get a song <br>
+Song ID: <input type="text" [(ngModel)]="this.song_id">
+<button (click)="getASong(this.song_id)">Get a Song</button>
+<p>Song ID {{ song_id }}</p>
+
+<hr>
 Like a song <br>
 Song ID: <input type="text" [(ngModel)]="this.song_id">
-<button (click)="likeSong()">Like Song</button>
+<button (click)="likeSong(this.song_id)">Like Song</button>
 <p>Song ID {{ song_id }}</p>
 
 <div class="container">

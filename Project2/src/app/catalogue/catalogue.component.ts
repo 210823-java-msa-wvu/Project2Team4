@@ -24,6 +24,8 @@ export class CatalogueComponent implements OnInit {
 
   song!: SimpleSong;
 
+  song2!: Song;
+
   constructor(private songService: SongService) { }
 
   ngOnInit(): void {
@@ -35,6 +37,17 @@ export class CatalogueComponent implements OnInit {
     .subscribe(
       resp => {
         this.songs = resp;
+      }
+    )
+  }
+
+  getASong(id: any){
+    console.log("Song id "+ id);
+    this.songService.getASong(id) // returns observable of Song
+    .subscribe(
+      resp => {
+        this.song = resp;
+        console.log("resp "+ JSON.stringify(resp));
       }
     )
   }
@@ -64,15 +77,15 @@ export class CatalogueComponent implements OnInit {
       )
     }
 
-    likeSong()
+    likeSong(id: number)
     {
       const si = this.song_id;  
       const l = 1;
       console.log("song id is "+ si);
 
-      //getBySongId();
+      this.getASong(id);
 
-      this.songService.likeSong(si, l) 
+      this.songService.likeSong(this.song2) 
       .subscribe(
         resp => {
           console.log("resp: "+resp);

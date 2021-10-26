@@ -17,6 +17,10 @@ export class SongService {
     return this.http.get<Song[]>(this.baseUrl);
   }
 
+  getASong(id: string): Observable<Song>{
+    return this.http.get<Song>(this.baseUrl+"/"+id);
+  }
+
   addSong(song: SimpleSong): Observable<any>{
     const headers ={'content-type': 'application/json'}
     const body = JSON.stringify(song);
@@ -25,10 +29,11 @@ export class SongService {
     return this.http.post(this.baseUrl, body, {'headers':headers})
   }
 
-  likeSong(song_id: number, likes: number): Observable<any>{
-    const body = (likes);
+  likeSong(song2: Song): Observable<any>{
+    const headers ={'content-type': 'application/json'};
+    const body = JSON.stringify(song2);
     console.log(body)
-    return this.http.put<any>(this.baseUrl+"/"+song_id, body)
+    return this.http.put<any>(this.baseUrl+"/song/"+song2.id, body, {'headers':headers})
   }
   
 }
