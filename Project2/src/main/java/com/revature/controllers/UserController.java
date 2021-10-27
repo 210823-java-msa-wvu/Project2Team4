@@ -41,7 +41,8 @@ public class UserController {
     @CrossOrigin(origins = "http://localhost:4200")
     @PostMapping(consumes = "application/json", produces = "application/json")
     public User addUser(@RequestBody User user) {
-        return userRepo.save(user);
+      System.out.println(user);
+      return userRepo.save(user);
     }
 
     @CrossOrigin(origins = "http://localhost:4200")
