@@ -21,3 +21,23 @@ Admins must be able to remove comments/posts if flagged and innappropriate (stre
 (stretch goal: Admins must be able to approve public groups)
 
 (stretch goal: Users must be able to create public groups for discussions and sharing)
+
+# Technologies Used
+
+- Maven 4.0.0
+- PostGreSQL 42.2.22
+- Tomcat 9.0.50
+- Java 1.8
+- IntelliJ 11.0.11
+- Spring Boot 2.5.5
+- Spring Data Jpa 2.5.6
+- Node Package Manager 6.14.15
+- Node 14.18.0
+- Angular CLI 12.2.10
+- Angular 12.2.0
+
+# Features
+- Login
+- Registration
+- Fans can follow Musicians
+- Musicians can add songs
