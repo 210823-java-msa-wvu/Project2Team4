@@ -24,17 +24,17 @@ export class RegisterService {
   registerApplication(user: User){
     if (user.user_type_id == 1){
       console.log("1")
-      this.register(user);
+      this.addUser(user);
     } else if (user.user_type_id == 2){
       console.log("2")
-      this.register(user);
+      this.addUser(user);
     } else {
       console.log("failed")
     }
 
   }
 
-  register(user: User): Observable<any>{
+  addUser(user: User): Observable<any>{
     const headers ={'content-type': 'application/json'}
     const body = JSON.stringify(user);
     console.log("user:"+user);

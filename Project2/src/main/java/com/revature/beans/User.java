@@ -29,7 +29,16 @@ public class User {
         this.password = password;
     }
 
-    public Integer getUserId() {
+  public User(Integer user_id, String first_name, String last_name, String username, String password, Integer user_type_id) {
+    this.user_id = user_id;
+    this.first_name = first_name;
+    this.last_name = last_name;
+    this.username = username;
+    this.password = password;
+    this.user_type_id = user_type_id;
+  }
+
+  public Integer getUserId() {
         return user_id;
     }
 
