@@ -24,7 +24,7 @@ public class FollowersController {
 
   @CrossOrigin(origins = "http://localhost:4200")
   @GetMapping
-  public List<Followers> getAllMusicians() {
+  public List<Followers> getAllFollowers() {
     return followersRepo.findAll();
   }
 

@@ -1,12 +1,18 @@
-<hr/>
-<p>musicianhomepage works!</p>
+<div><hr/>
+<h1>WELCOME MUSICIAN!</h1>
 
+Add a Song <br>
 
+Song Title: <input type="text" [(ngModel)]="this.title">
+Musician ID: <input type="text" [(ngModel)]="this.musician_id">
+URL: <input type="text" [(ngModel)]="this.url">
+<button (click)="addSong()">Add Song</button>
+<p>Song Title {{ title }}    Musician ID {{ musician_id }}  url {{ url }}</p>
 
 <app-catalogue></app-catalogue>
 
 <a routerLink="/login">Logout</a>
-
+</div>
 
 <!-- Sample code for reference -->
 <!-- <div style="background-color: orange">
