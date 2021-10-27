@@ -9,6 +9,7 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
+  credits = 'Robert Campbell, Yousef Abdulrahman, Dave Whiting'
 
   username: string = " ";
   password: string = " ";

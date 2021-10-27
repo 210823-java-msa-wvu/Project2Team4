@@ -1,25 +1,22 @@
-<h1 class="display-6">Catalogue</h1>
-
-Add a Song <br>
+<!-- Add a Song <br>
 
 Song Title: <input type="text" [(ngModel)]="this.title">
 Musician ID: <input type="text" [(ngModel)]="this.musician_id">
 URL: <input type="text" [(ngModel)]="this.url">
 <button (click)="addSong()">Add Song</button>
 <p>Song Title {{ title }}    Musician ID {{ musician_id }}  url {{ url }}</p>
-
-<hr>
-Get a song <br>
+ -->
+<hr> 
+<h1 class="display-6">Catalogue</h1>
+<!-- Get a song <br>
 Song ID: <input type="text" [(ngModel)]="this.song_id">
 <button (click)="getASong(this.song_id)">Get a Song</button>
 <p>Song ID {{ song_id }}</p>
-
 <hr>
 Like a song <br>
 Song ID: <input type="text" [(ngModel)]="this.song_id">
 <button (click)="likeSong(this.song_id)">Like Song</button>
-<p>Song ID {{ song_id }}</p>
-
+<p>Song ID {{ song_id }}</p> -->
 <div class="container">
     <br>
     <div>
@@ -30,12 +27,11 @@ Song ID: <input type="text" [(ngModel)]="this.song_id">
                 style="width: 18rem;">
             
             <div class="card-body">
-                <h5 class="card-title">{{ song.title | uppercase}}</h5>
+                <h5 ><b>{{ song.title | uppercase}}</b></h5>
                 <p>Song ID: {{ song.id }}</p>
                 <ul class="list-group">
-                    <li class="list-group-item">by {{ song.musician.firstName + " " + song.musician.lastName }}</li>
-                    <li class="list-group-item">Likes: {{ song.likes + " " + song.url }}</li>
-
+                    <li class="list-group-item">by {{ song.musician.firstName + " " + song.musician.lastName + " - " + song.musician_id}}</li>
+                    <li class="list-group-item">URL: {{ song.url }}</li>
                 </ul>
             </div>
         </div>
