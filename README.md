@@ -35,6 +35,7 @@ Admins must be able to remove comments/posts if flagged and innappropriate (stre
 - Node 14.18.0
 - Angular CLI 12.2.10
 - Angular 12.2.0
+- Postman 8.10.0
 
 # Features
 - Login
