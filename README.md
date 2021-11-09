@@ -31,11 +31,16 @@ Admins must be able to remove comments/posts if flagged and innappropriate (stre
 - IntelliJ 11.0.11
 - Spring Boot 2.5.5
 - Spring Data Jpa 2.5.6
+- Spring Web MVC
 - Node Package Manager 6.14.15
 - Node 14.18.0
 - Angular CLI 12.2.10
 - Angular 12.2.0
 - Postman 8.10.0
+- DBeaver
+- Visual Studio Code
+- JDBC
+- AWS RDS
 
 # Features
 - Login
